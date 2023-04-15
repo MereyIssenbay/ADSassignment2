@@ -26,17 +26,18 @@ public class MyArrayList<T> implements MyList {
         return (T) arr[index];
     }
 
-    public int getSize() {
+    @Override
+    public int size() {
         return size;
     }
 
     @Override
-    public int size() {
-        return 0;
-    }
-
-    @Override
     public boolean contains(Object o) {
+        for(Object element : arr){
+            if(element != null && element.equals(o)){
+                return true;
+            }
+        }
         return false;
     }
 
@@ -61,7 +62,7 @@ public class MyArrayList<T> implements MyList {
     }
 
     public void clear(){
-        this.arr = new int[5];
+        this.arr = new Object[5];
         this.size = 0;
     }
 
