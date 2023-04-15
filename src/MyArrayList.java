@@ -1,9 +1,9 @@
-public class MyArrayList implements MyList {
-    private int[] arr;
-    private int size;
+public class MyArrayList<T> implements MyList {
+    private Object[] arr;
+    private int size = 0;
 
     MyArrayList(){
-        this.arr = new int[5];
+        this.arr = new Object[5];
         this.size = 0;
     }
     public void  add(int element){
@@ -14,16 +14,16 @@ public class MyArrayList implements MyList {
     }
 
     public void increaseBuffer(){
-        int[] newArr = new int[arr.length*2];
+        Object[] newArr = new Object[arr.length*2];
         for(int i=0; i< arr.length; i++){
             newArr[i]=arr[i];
         }
         arr = newArr;
     }
 
-    public int getElement(int index) {
+    public T getElement(int index) {
         checkIndex(index);
-        return arr[index];
+        return (T) arr[index];
     }
 
     public int getSize() {
