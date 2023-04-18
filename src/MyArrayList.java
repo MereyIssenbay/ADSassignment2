@@ -6,13 +6,6 @@ public class MyArrayList<T> implements MyList {
         this.arr = new Object[5];
         this.size = 0;
     }
-    public void  add(int element){
-        if(size == arr.length){
-            increaseBuffer();
-        }
-        arr[size++] = element;
-    }
-
     public void increaseBuffer(){
         Object[] newArr = new Object[arr.length*2];
         for(int i=0; i< arr.length; i++){
@@ -42,13 +35,26 @@ public class MyArrayList<T> implements MyList {
     }
 
     @Override
-    public void add(Object item) {
-
+    public void add(Object element) {
+        if(size == arr.length){
+            increaseBuffer();
+        }
+        arr[size++] = element;
     }
 
     @Override
     public void add(Object item, int index) {
-
+        if (index > size || index < 0) {
+            throw new IndexOutOfBoundsException();
+        }
+        if (size == arr.length) {
+            increaseBuffer();
+        }
+        for(int i=size-1; i>=index; i--){
+            arr[i+1] = arr[i];
+        }
+        arr[index] = item;
+        size++;
     }
 
     @Override
