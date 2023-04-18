@@ -35,11 +35,11 @@ public class MyArrayList<T> implements MyList {
     }
 
     @Override
-    public void add(Object element) {
+    public void add(Object item) {
         if(size == arr.length){
             increaseBuffer();
         }
-        arr[size++] = element;
+        arr[size++] = item;
     }
 
     @Override
@@ -59,6 +59,12 @@ public class MyArrayList<T> implements MyList {
 
     @Override
     public boolean remove(Object item) {
+        for(int i=0; i<size; i++){
+            if(arr[i] != null && arr[i].equals(item)){
+                remove(i);
+                return true;
+            }
+        }
         return false;
     }
 
