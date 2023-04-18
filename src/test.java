@@ -10,7 +10,7 @@ public class test {
         myList.add(4, 1);
         System.out.println("Element at index 1: " + myList.get(1));
         myList.printALL();
-        myList.remove(1);
+        myList.sort();
         myList.printALL();
     }
 }
