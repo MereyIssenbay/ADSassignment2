@@ -6,5 +6,7 @@ public class test {
         myList.add(3);
         System.out.println("Elements in the list after adding 3 elements: " + myList.size());
         System.out.println("Element at index 1: " + myList.get(1));
+        myList.add(4, 1);
+        System.out.println("Element at index 1: " + myList.get(1));
     }
 }
