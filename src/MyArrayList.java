@@ -70,7 +70,13 @@ public class MyArrayList<T> implements MyList {
 
     @Override
     public Object remove(int index) {
-        return null;
+        checkIndex(index);
+        T removed = (T) arr[index];
+        for(int i=index; i<size-1; i++){
+            arr[i]=arr[i+1];
+        }
+        size--;
+        return removed;
     }
 
     public void clear(){

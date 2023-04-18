@@ -8,5 +8,7 @@ public class test {
         System.out.println("Element at index 1: " + myList.get(1));
         myList.add(4, 1);
         System.out.println("Element at index 1: " + myList.get(1));
+        myList.remove(1);
+        System.out.println("Element at index 1: " + myList.get(1));
     }
 }
