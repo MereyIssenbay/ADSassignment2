@@ -4,11 +4,13 @@ public class test {
         myList.add(1);
         myList.add(2);
         myList.add(3);
+        myList.printALL();
         System.out.println("Elements in the list after adding 3 elements: " + myList.size());
         System.out.println("Element at index 1: " + myList.get(1));
         myList.add(4, 1);
         System.out.println("Element at index 1: " + myList.get(1));
+        myList.printALL();
         myList.remove(1);
-        System.out.println("Element at index 1: " + myList.get(1));
+        myList.printALL();
     }
 }

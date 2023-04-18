@@ -13,12 +13,6 @@ public class MyArrayList<T> implements MyList {
         }
         arr = newArr;
     }
-
-    public T getElement(int index) {
-        checkIndex(index);
-        return (T) arr[index];
-    }
-
     @Override
     public int size() {
         return size;
@@ -83,7 +77,6 @@ public class MyArrayList<T> implements MyList {
         this.arr = new Object[5];
         this.size = 0;
     }
-
     @Override
     public Object get(int index) {
         checkIndex(index);
@@ -99,22 +92,29 @@ public class MyArrayList<T> implements MyList {
     public int lastIndexOf(Object o) {
         return 0;
     }
-
     @Override
     public void sort() {
-
-    }
-
-    public void delete(int index){
-        checkIndex(index);
-        for(int i= index + 1; i<size; i++){
-            arr[i-1] = arr[i];
+        for (int i = 0; i < size - 1; i++) {
+            for (int j = i + 1; j < size; j++) {
+                if (((Comparable)arr[i]).compareTo(arr[j]) > 0) {
+                    Object temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
         }
-        size--;
+    }
+    @Override
+    public void printALL(){
+        for (int i = 0; i < size; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
     }
     public void checkIndex(int index){
         if(index < 0 || index>=size){
             throw new IndexOutOfBoundsException();
         }
     }
+
 }
