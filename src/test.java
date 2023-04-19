@@ -9,6 +9,7 @@ public class test {
         myList1.add(4,1);
         myList1.printALL();
         myList1.remove(1);
+        System.out.println(myList1.remove(Integer.valueOf("4")));
         myList1.printALL();
     }
 }
