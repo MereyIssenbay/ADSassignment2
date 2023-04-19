@@ -179,7 +179,31 @@ public class MyLinkedList<T> implements MyList{
 
     @Override
     public void sort() {
+        if (size < 2) {
+            return;
+        }
+        Node current = head;
+        while (current != null) {
+            Node min = current;
+            Node innerCurrent = current.next;
 
+            while (innerCurrent != null) {
+                if (((Comparable) innerCurrent.element).compareTo(min.element) < 0) {
+                    min = innerCurrent;
+                }
+
+                innerCurrent = innerCurrent.next;
+            }
+
+            if (min != current) {
+                // Swap the values of the current and minimum nodes
+                Object temp = current.element;
+                current.element = min.element;
+                min.element = temp;
+            }
+
+            current = current.next;
+        }
     }
     public void checkIndex(int index){
         if (index < 0 || index >= size) {

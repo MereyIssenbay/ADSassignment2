@@ -14,5 +14,8 @@ public class test {
         System.out.println(myList1.get(2));
         myList1.add(2);
         System.out.println(myList1.lastIndexOf(2));
+        myList1.printALL();
+        myList1.sort();
+        myList1.printALL();
     }
 }
