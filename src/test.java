@@ -8,5 +8,7 @@ public class test {
         myList1.printALL();
         myList1.add(4,1);
         myList1.printALL();
+        myList1.remove(1);
+        myList1.printALL();
     }
 }
