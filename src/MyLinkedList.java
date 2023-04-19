@@ -4,10 +4,10 @@ public class MyLinkedList<T> implements MyList{
         Node<E> next;
         Node<E> prev;
 
-        public Node(E element) {
+        Node(E element, Node next, Node prev) {
             this.element = element;
-            this.next = null;
-            this.prev = null;
+            this.next = next;
+            this.prev = prev;
         }
     }
     private Node<T> head;
@@ -26,15 +26,13 @@ public class MyLinkedList<T> implements MyList{
 
     @Override
     public void add(Object item) {
-        Node<T> newNode = new Node<T>((T) item);
-        if (tail == null) {
-            head = newNode;
-            tail = newNode;
-        } else {
-            newNode.prev = tail;
+        Node newNode = new Node(item, null, tail);
+        if (tail != null) {
             tail.next = newNode;
-            tail = newNode;
+        } else {
+            head = newNode;
         }
+        tail = newNode;
         size++;
     }
 
@@ -44,12 +42,20 @@ public class MyLinkedList<T> implements MyList{
         if (index == size) {
             add(item);
         } else {
-            Node curNode = head;
-            for (int i = 0; i < index; i++) {
-                curNode = curNode.next;
+            Node curNode;
+            if (index < size / 2) {
+                curNode = head;
+                for (int i = 0; i < index; i++) {
+                    curNode = curNode.next;
+                }
+            } else {
+                curNode = tail;
+                for (int i = size - 1; i > index; i--) {
+                    curNode = curNode.prev;
+                }
             }
             Node prevNode = curNode.prev;
-            Node newNode = new Node<T>((T)item);
+            Node newNode = new Node(item, curNode, prevNode);
             curNode.prev = newNode;
             if (prevNode != null) {
                 prevNode.next = newNode;
