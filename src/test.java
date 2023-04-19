@@ -12,5 +12,6 @@ public class test {
         myList.printALL();
         myList.sort();
         myList.printALL();
+        System.out.println(myList.indexOf(2));
     }
 }
