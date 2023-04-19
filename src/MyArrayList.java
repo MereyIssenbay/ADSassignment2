@@ -96,7 +96,12 @@ public class MyArrayList<T> implements MyList {
 
     @Override
     public int lastIndexOf(Object o) {
-        return 0;
+        for(int i=size-1; i>=0; i--){
+            if(arr[i] != null && arr[i].equals(o)){
+                return i;
+            }
+        }
+        return -1;
     }
     @Override
     public void sort() {
