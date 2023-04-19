@@ -12,6 +12,7 @@ public class test {
         System.out.println(myList1.remove(Integer.valueOf("4")));
         myList1.printALL();
         System.out.println(myList1.get(2));
-        System.out.println(myList1.indexOf(2));
+        myList1.add(2);
+        System.out.println(myList1.lastIndexOf(2));
     }
 }
