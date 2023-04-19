@@ -73,7 +73,33 @@ public class MyLinkedList<T> implements MyList{
 
     @Override
     public Object remove(int index) {
-        return null;
+        checkIndex(index);
+        Node curNode;
+        if (index < size / 2) {
+            curNode = head;
+            for (int i = 0; i < index; i++) {
+                curNode = curNode.next;
+            }
+        } else {
+            curNode = tail;
+            for (int i = size - 1; i > index; i--) {
+                curNode = curNode.prev;
+            }
+        }
+        Node prevNode = curNode.prev;
+        Node nextNode = curNode.next;
+        if (prevNode != null) {
+            prevNode.next = nextNode;
+        } else {
+            head = nextNode;
+        }
+        if (nextNode != null) {
+            nextNode.prev = prevNode;
+        } else {
+            tail = prevNode;
+        }
+        size--;
+        return curNode.element;
     }
 
     @Override
