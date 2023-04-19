@@ -1,19 +1,10 @@
 public class test {
     public static void main(String[] args) {
         MyList<Integer> myList = new MyArrayList();
-        myList.add(1);
-        myList.add(2);
-        myList.add(3);
-        myList.printALL();
-        System.out.println("Elements in the list after adding 3 elements: " + myList.size());
-        System.out.println("Element at index 1: " + myList.get(1));
-        myList.add(4, 1);
-        System.out.println("Element at index 1: " + myList.get(1));
-        myList.printALL();
-        myList.sort();
-        myList.printALL();
-        myList.add(2);
-        System.out.println(myList.indexOf(2));
-        System.out.println(myList.lastIndexOf(2));
+        MyList<Integer> myList1 = new MyLinkedList<>();
+        myList1.add(1);
+        myList1.add(2);
+        myList1.add(3);
+        myList1.printALL();
     }
 }

@@ -80,6 +80,12 @@ public class MyLinkedList<T> implements MyList{
 
     @Override
     public void printALL() {
-
+        Node<T> node = head;
+        System.out.print("[ ");
+        while (node != null) {
+            System.out.print(node.element + " ");
+            node = node.next;
+        }
+        System.out.println("]");
     }
 }
