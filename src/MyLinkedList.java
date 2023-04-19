@@ -40,7 +40,26 @@ public class MyLinkedList<T> implements MyList{
 
     @Override
     public void add(Object item, int index) {
-
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException();
+        }
+        if (index == size) {
+            add(item);
+        } else {
+            Node curNode = head;
+            for (int i = 0; i < index; i++) {
+                curNode = curNode.next;
+            }
+            Node prevNode = curNode.prev;
+            Node newNode = new Node<T>((T)item);
+            curNode.prev = newNode;
+            if (prevNode != null) {
+                prevNode.next = newNode;
+            } else {
+                head = newNode;
+            }
+            size++;
+        }
     }
 
     @Override
