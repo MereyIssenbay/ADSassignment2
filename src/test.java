@@ -6,5 +6,7 @@ public class test {
         myList1.add(2);
         myList1.add(3);
         myList1.printALL();
+        myList1.add(4,1);
+        myList1.printALL();
     }
 }

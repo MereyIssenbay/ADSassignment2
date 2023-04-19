@@ -40,9 +40,7 @@ public class MyLinkedList<T> implements MyList{
 
     @Override
     public void add(Object item, int index) {
-        if (index < 0 || index > size) {
-            throw new IndexOutOfBoundsException();
-        }
+        checkIndex(index);
         if (index == size) {
             add(item);
         } else {
@@ -96,6 +94,11 @@ public class MyLinkedList<T> implements MyList{
     public void sort() {
 
     }
+    public void checkIndex(int index){
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException();
+        }
+    }
 
     @Override
     public void printALL() {
@@ -107,4 +110,5 @@ public class MyLinkedList<T> implements MyList{
         }
         System.out.println("]");
     }
+
 }
