@@ -11,5 +11,6 @@ public class test {
         myList1.remove(1);
         System.out.println(myList1.remove(Integer.valueOf("4")));
         myList1.printALL();
+        System.out.println(myList1.get(2));
     }
 }

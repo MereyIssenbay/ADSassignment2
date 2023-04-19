@@ -133,7 +133,20 @@ public class MyLinkedList<T> implements MyList{
 
     @Override
     public Object get(int index) {
-        return null;
+        checkIndex(index);
+        Node currentNode;
+        if (index < size / 2) {
+            currentNode = head;
+            for (int i = 0; i < index; i++) {
+                currentNode = currentNode.next;
+            }
+        } else {
+            currentNode = tail;
+            for (int i = size - 1; i > index; i--) {
+                currentNode = currentNode.prev;
+            }
+        }
+        return currentNode.element;
     }
 
     @Override
