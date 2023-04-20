@@ -1,5 +1,5 @@
-# Documentation of the second assignment
-Here you can find explanations of all functions that I used to solve these problems.
+# Documentation
+Here you can find explanations of all methods.
 
 *ArrayList*
 
