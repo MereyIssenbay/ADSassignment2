@@ -74,6 +74,17 @@ public class MyLinkedList<T> implements MyList{
     }
 
     @Override
+    public void addAllindex(Object[] arr, int index) {
+        return;
+    }
+
+    @Override
+    public void addAllindexLinked(Object o, int index) {
+        checkIndex(index);
+
+    }
+
+    @Override
     public boolean remove(Object item) {
         Node currentNode = head;
         while (currentNode != null && !currentNode.element.equals(item)) {
@@ -230,3 +241,7 @@ public class MyLinkedList<T> implements MyList{
     }
 
 }
+
+/*
+ 1 2 3 4 5 6 7 8
+ */

@@ -2,20 +2,13 @@ public class test {
     public static void main(String[] args) {
         MyList<Integer> myList = new MyArrayList();
         MyList<Integer> myList1 = new MyLinkedList<>();
-        myList1.add(1);
-        myList1.add(2);
-        myList1.add(3);
-        myList1.printALL();
-        myList1.add(4,1);
-        myList1.printALL();
-        myList1.remove(1);
-        System.out.println(myList1.remove(Integer.valueOf("4")));
-        myList1.printALL();
-        System.out.println(myList1.get(2));
-        myList1.add(2);
-        System.out.println(myList1.lastIndexOf(2));
-        myList1.printALL();
-        myList1.sort();
-        myList1.printALL();
+        Object arr[] = {4,5,6};
+        myList.add(1);
+        myList.add(2);
+        myList.add(3);
+        myList.add(7);
+        myList.add(8);
+        myList.addAllindex(arr, 2);
+        myList.printALL();
     }
 }

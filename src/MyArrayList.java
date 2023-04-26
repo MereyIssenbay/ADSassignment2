@@ -52,6 +52,26 @@ public class MyArrayList<T> implements MyList {
     }
 
     @Override
+    public void addAllindex(Object[] arr2, int index) {
+        checkIndex(index);
+        if (size == arr.length) {
+            increaseBuffer();
+        }
+        for(int i=size-1; i>=index; i--){
+            arr[i + arr2.length] = arr[i];
+        }
+        for (int i = 0;i < arr2.length; i++ ){
+            arr[i + index + 1] = arr2[i];
+        }
+        size += arr2.length;
+    }
+
+    @Override
+    public void addAllindexLinked(Object o, int index) {
+        return;
+    }
+
+    @Override
     public boolean remove(Object item) {
         for(int i=0; i<size; i++){
             if(arr[i] != null && arr[i].equals(item)){
