@@ -81,6 +81,7 @@ public class MyLinkedList<T> implements MyList{
     @Override
     public void addAllindexLinked(Object o, int index) {
         checkIndex(index);
+        //god save me
 
     }
 
