@@ -53,17 +53,17 @@ public class MyArrayList<T> implements MyList {
 
     @Override
     public void addAllindex(Object[] arr2, int index) {
-        checkIndex(index);
-        if (size == arr.length) {
+        checkIndex(index);//check index
+        if (size == arr.length) { //increase the buffer
             increaseBuffer();
         }
         for(int i=size-1; i>=index; i--){
-            arr[i + arr2.length] = arr[i];
+            arr[i + arr2.length] = arr[i]; //moves elements by index to right
         }
         for (int i = 0;i < arr2.length; i++ ){
-            arr[i + index + 1] = arr2[i];
+            arr[i + index + 1] = arr2[i]; //add new elements from array
         }
-        size += arr2.length;
+        size += arr2.length; //increase size
     }
 
     @Override
