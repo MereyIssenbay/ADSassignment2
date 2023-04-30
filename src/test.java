@@ -7,6 +7,9 @@ public class test {
         queue.enqueue(3);
 
         System.out.println(queue.size()); // 3
+        System.out.println(queue.peek()); // 1
+        System.out.println(queue.dequeue()); // 1
+        System.out.println(queue.dequeue()); // 2
 
     }
 }
