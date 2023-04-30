@@ -16,6 +16,7 @@ public class MyArrayListQueue<E> {
         checkEmpty();
         return (E) array.get(0);
     }
+
     public boolean isEmpty() {
         return array.size() == 0;
     }

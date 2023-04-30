@@ -1,25 +1,12 @@
 public class test {
     public static void main(String[] args) {
-        MyArrayListStack stack = new MyArrayListStack();
-        System.out.println(stack.isEmpty());
+        MyArrayListQueue<Integer> queue = new MyArrayListQueue<>();
 
-        stack.push("apple");
-        stack.push("banana");
-        stack.push("orange");
-        System.out.println(stack.size());
+        queue.enqueue(1);
+        queue.enqueue(2);
+        queue.enqueue(3);
 
-        System.out.println(stack.peek());
-        System.out.println(stack.pop());
+        System.out.println(queue.size()); // 3
 
-        System.out.println(stack.peek());
-
-        stack.push("grape");
-        System.out.println(stack.size());
-
-        System.out.println(stack.pop());
-        System.out.println(stack.pop());
-        System.out.println(stack.pop());
-
-        System.out.println(stack.isEmpty());
     }
 }
