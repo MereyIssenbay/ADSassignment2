@@ -6,6 +6,7 @@ public class test {
         stack.push("apple");
         stack.push("banana");
         stack.push("orange");
+        System.out.println(stack.size()); // 3
 
         System.out.println(stack.peek()); //orange
         System.out.println(stack.pop()); // orange
@@ -13,6 +14,7 @@ public class test {
         System.out.println(stack.peek()); // banana
 
         stack.push("grape");
+        System.out.println(stack.size()); // 3
 
         System.out.println(stack.pop()); // grape
         System.out.println(stack.pop()); // banana
