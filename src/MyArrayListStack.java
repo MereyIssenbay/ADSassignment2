@@ -15,8 +15,11 @@ public class MyArrayListStack<E> {
         checkEmpty();
         return (E) array.get(array.size() - 1);
     }
+    public boolean isEmpty() {
+        return array.size() == 0;
+    }
     public void checkEmpty(){
-        if (array.size() == 0) {
+        if (isEmpty()) {
             throw new EmptyStackException();
         }
     }
