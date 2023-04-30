@@ -1,25 +1,25 @@
 public class test {
     public static void main(String[] args) {
         MyArrayListStack stack = new MyArrayListStack();
-        System.out.println(stack.isEmpty()); // true
+        System.out.println(stack.isEmpty());
 
         stack.push("apple");
         stack.push("banana");
         stack.push("orange");
-        System.out.println(stack.size()); // 3
+        System.out.println(stack.size());
 
-        System.out.println(stack.peek()); //orange
-        System.out.println(stack.pop()); // orange
+        System.out.println(stack.peek());
+        System.out.println(stack.pop());
 
-        System.out.println(stack.peek()); // banana
+        System.out.println(stack.peek());
 
         stack.push("grape");
-        System.out.println(stack.size()); // 3
+        System.out.println(stack.size());
 
-        System.out.println(stack.pop()); // grape
-        System.out.println(stack.pop()); // banana
-        System.out.println(stack.pop()); // apple
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
 
-        System.out.println(stack.isEmpty()); // true
+        System.out.println(stack.isEmpty());
     }
 }
