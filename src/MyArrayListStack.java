@@ -18,6 +18,9 @@ public class MyArrayListStack<E> {
     public boolean isEmpty() {
         return array.size() == 0;
     }
+    public int size() {
+        return array.size();
+    }
     public void checkEmpty(){
         if (isEmpty()) {
             throw new EmptyStackException();
