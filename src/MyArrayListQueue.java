@@ -1,5 +1,4 @@
 import java.util.EmptyStackException;
-import java.util.NoSuchElementException;
 public class MyArrayListQueue<E> {
     private MyArrayList<E> array;
     public MyArrayListQueue() {
