@@ -1,7 +1,7 @@
 # Documentation
 Here you can find explanations of all methods.
 
-*ArrayList*
+#ArrayList
 
 **Description:** Increase the buffer of an array.
 
@@ -244,7 +244,7 @@ public void clear(){
 ```
 
 
-*LinkedList*
+#LinkedList
 
 **Description:** Get size of a list.
 
@@ -469,3 +469,5 @@ public void clear(){
         System.out.println();
     }
 ```
+
+#Stack
