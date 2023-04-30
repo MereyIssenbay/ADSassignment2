@@ -1,3 +1,4 @@
+import java.util.EmptyStackException;
 import java.util.NoSuchElementException;
 public class MyArrayListQueue<E> {
     private MyArrayList<E> array;
@@ -12,5 +13,10 @@ public class MyArrayListQueue<E> {
     }
     public int size() {
         return array.size();
+    }
+    public void checkEmpty(){
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
     }
 }
