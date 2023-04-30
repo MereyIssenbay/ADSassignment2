@@ -1,7 +1,7 @@
 # Documentation
 Here you can find explanations of all methods.
 
-#ArrayList
+*ArrayList*
 
 **Description:** Increase the buffer of an array.
 
@@ -244,7 +244,7 @@ public void clear(){
 ```
 
 
-#LinkedList
+*LinkedList*
 
 **Description:** Get size of a list.
 
@@ -470,4 +470,63 @@ public void clear(){
     }
 ```
 
-#Stack
+
+*Stack*
+**Description:** This method adds an element to the top of the stack.
+
+**Explanation:** It add an element to the top of the stack using the add method of the MyArrayList.
+
+**Solution:** 
+```java
+public void push(E element) {
+        array.add(element);
+    }
+```
+
+
+**Description:** This method removes and returns the top element of the stack.
+
+**Explanation:** It remove and return the top element of the stack using the remove method of the MyArrayList. The last element of the list is removed and returned.
+
+**Solution:** 
+```java
+public E pop() {
+        checkEmpty();
+        return (E) array.remove(array.size() - 1);
+    }
+```
+**Description:** This method returns the top element of the stack without removing it.
+
+**Explanation:** It return the top element of the stack without removing it using the get method of the MyArrayList. The last element of the list is returned.
+
+**Solution:** 
+```java
+public E peek() {
+        checkEmpty();
+        return (E) array.get(array.size() - 1);
+    }
+```
+
+
+**Description:** This method returns true if the stack is empty or false if it is not.
+
+**Explanation:** The isEmpty method is used to check if the stack is empty using the size method of the MyArrayList. If the size is 0, then the stack is empty.
+
+**Solution:** 
+```java
+public boolean isEmpty() {
+        return array.size() == 0;
+    }
+```
+
+
+**Description:** This method returns the number of elements in the stack.
+
+**Explanation:** The size method is used to return the number of elements in the stack using the size method of the MyArrayList. The size of the list is returned.
+
+**Solution:** 
+```java
+public int size() {
+        return array.size();
+    }
+```
