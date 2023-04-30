@@ -8,9 +8,7 @@ public class MyArrayListStack<E> {
         array.add(element);
     }
     public E pop() {
-        if (array.size() == 0) {
-            throw new EmptyStackException();
-        }
+        checkEmpty();
         return (E) array.remove(array.size() - 1);
     }
     public E peek() {
