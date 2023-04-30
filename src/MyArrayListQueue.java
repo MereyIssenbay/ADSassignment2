@@ -10,4 +10,7 @@ public class MyArrayListQueue<E> {
     public boolean isEmpty() {
         return array.size() == 0;
     }
+    public int size() {
+        return array.size();
+    }
 }
