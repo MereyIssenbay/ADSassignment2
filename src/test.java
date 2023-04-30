@@ -1,14 +1,23 @@
 public class test {
     public static void main(String[] args) {
-        MyList<Integer> myList = new MyArrayList();
-        MyList<Integer> myList1 = new MyLinkedList<>();
-        Object arr[] = {4,5,6};
-        myList.add(1);
-        myList.add(2);
-        myList.add(3);
-        myList.add(7);
-        myList.add(8);
-        myList.addAllindex(arr, 2);
-        myList.printALL();
+        MyArrayListStack stack = new MyArrayListStack();
+        System.out.println(stack.isEmpty()); // true
+
+        stack.push("apple");
+        stack.push("banana");
+        stack.push("orange");
+
+        System.out.println(stack.peek()); //orange
+        System.out.println(stack.pop()); // orange
+
+        System.out.println(stack.peek()); // banana
+
+        stack.push("grape");
+
+        System.out.println(stack.pop()); // grape
+        System.out.println(stack.pop()); // banana
+        System.out.println(stack.pop()); // apple
+
+        System.out.println(stack.isEmpty()); // true
     }
 }
