@@ -14,5 +14,6 @@ public class test {
         System.out.println(queue.isEmpty()); // false
         System.out.println(queue.dequeue()); // 3
         System.out.println(queue.size()); // 0
+        System.out.println(queue.isEmpty()); // true
     }
 }
