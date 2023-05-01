@@ -530,3 +530,67 @@ public int size() {
         return array.size();
     }
 ```
+
+*Queue*
+
+**Description:** This method adds an element to the back of the queue.
+
+**Explanation:** This method calls the add method of the MyArrayList class to add the specified element to the end of the array instance variable.
+
+**Solution:** 
+```java
+public void enqueue(E element) {
+        array.add(element);
+    }
+```
+
+
+**Description:** This method removes and returns the front element of the queue.
+
+**Explanation:** This method first checks if the array is empty using the isEmpty() method, and if it is, it throws a NoSuchElementException. If the array is not empty, it removes and returns the first element of the array using the remove(0) method of the MyArrayList class.
+
+**Solution:** 
+```java
+public E dequeue() {
+        checkEmpty();
+        return (E) array.remove(0);
+    }
+```
+
+
+**Description:** This method returns the front element of the queue without removing it.
+
+**Explanation:** This method first checks if the array is empty using the isEmpty() method, and if it is, it throws a NoSuchElementException. If the array is not empty, it returns the first element of the array using the get(0) method of the MyArrayList class.
+
+**Solution:** 
+```java
+public E peek() {
+        checkEmpty();
+        return (E) array.get(0);
+    }
+```
+
+
+**Description:** This method returns true if the queue is empty or false if it is not.
+
+**Explanation:** This method checks if the array instance variable is empty using the isEmpty() method of the MyArrayList class.
+
+**Solution:** 
+```java
+public boolean isEmpty() {
+        return array.size() == 0;
+    }
+```
+
+
+
+**Description:** This method returns the number of elements in the queue.
+
+**Explanation:** This method calls the size() method of the MyArrayList class to get the number of elements in the array instance variable.
+
+**Solution:** 
+```java
+public int size() {
+        return array.size();
+    }
+```
